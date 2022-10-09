@@ -1,8 +1,8 @@
 from time import sleep
-from client.infrastructure.settings.settings import Settings
-from client.infrastructure.dependency_injection.container import Container
-from client.models.order import Order
-from client.models.payment import Payment
+from Code.client.infrastructure.settings.settings import Settings
+from Code.client.infrastructure.dependency_injection.container import Container
+from Code.client.models.order import Order
+from Code.client.models.payment import Payment
 
 
 if __name__ == '__main__':

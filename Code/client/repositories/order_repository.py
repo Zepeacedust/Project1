@@ -1,4 +1,4 @@
-from client.models.order import Order
+from Code.client.models.order import Order
 
 
 class OrderRepository:

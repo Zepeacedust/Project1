@@ -1,7 +1,7 @@
-from client.models.order import Order
-from client.repositories.order_repository import OrderRepository
-from client.services.payment_service_stub import PaymentServiceStub
-from client.infrastructure.logging.I_logger import ILogger
+from Code.client.models.order import Order
+from Code.client.repositories.order_repository import OrderRepository
+from Code.client.services.payment_service_stub import PaymentServiceStub
+from Code.client.infrastructure.logging.I_logger import ILogger
 
 
 class OrderService:

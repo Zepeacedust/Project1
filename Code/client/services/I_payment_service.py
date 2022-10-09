@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from client.models.payment import Payment
+from Code.client.models.payment import Payment
 
 
 class IPaymentService(ABC):

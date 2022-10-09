@@ -1,6 +1,6 @@
-from structured_logging.configuration.logger_config import LoggerConfig
-from structured_logging.infrastructure.container import Container
-from structured_logging.logger.logger import Logger
+from Code.structured_logging.configuration.logger_config import LoggerConfig
+from Code.structured_logging.infrastructure.container import Container
+from Code.structured_logging.logger.logger import Logger
 
 
 def create_logger(logger_config: LoggerConfig) -> Logger:

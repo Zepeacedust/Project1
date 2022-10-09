@@ -28,5 +28,5 @@ class Settings(BaseSettings):
     environment: Environment
 
     class Config:
-        env_file = "./client/infrastructure/settings/.env"
+        env_file = "./Code/client/infrastructure/settings/.env"
         env_file_encoding = 'utf-8'

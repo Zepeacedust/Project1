@@ -1,8 +1,8 @@
 from dependency_injector import containers, providers
-from client.infrastructure.logging.logger_config_factory import create_logger_config
-from client.infrastructure.settings.settings import Settings
-from structured_logging.logger.logger import Logger
-from structured_logging.logger_creation.logger_factory import create_logger
+from Code.client.infrastructure.logging.logger_config_factory import create_logger_config
+from Code.client.infrastructure.settings.settings import Settings
+from Code.structured_logging.logger.logger import Logger
+from Code.structured_logging.logger_creation.logger_factory import create_logger
 
 
 class Container(containers.DeclarativeContainer):

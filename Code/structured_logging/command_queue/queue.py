@@ -1,4 +1,4 @@
-from structured_logging.command_queue.command import Command
+from Code.structured_logging.command_queue.command import Command
 import threading
 
 from Code.structured_logging.infrastructure.container import Container

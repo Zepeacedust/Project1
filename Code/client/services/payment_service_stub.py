@@ -1,5 +1,5 @@
-from client.infrastructure.logging.I_logger import ILogger
-from client.models.payment import Payment
+from Code.client.infrastructure.logging.I_logger import ILogger
+from Code.client.models.payment import Payment
 
 
 class PaymentServiceStub():
