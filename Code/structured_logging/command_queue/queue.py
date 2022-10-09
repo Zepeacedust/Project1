@@ -1,15 +1,11 @@
 from Code.structured_logging.command_queue.command import Command
 import threading
 
-from Code.structured_logging.infrastructure.container import Container
-
 from time import sleep
 
 class Queue:
-    # TODO: we also need to inject the async delay time into the constructor
-    def __init__(self):
-        # TODO INJECT THIS PROPERLY!!!
-        self.async_wait_delay_in_seconds = 1
+    def __init__(self, async_wait_delay_in_seconds):
+        self.async_wait_delay_in_seconds = async_wait_delay_in_seconds
         self.__commands:list[Command] = []
         self.__thread = threading.Thread(target=self.__process)
         self.__thread.daemon = True
