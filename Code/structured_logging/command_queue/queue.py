@@ -5,7 +5,6 @@ import threading
 class Queue:
     # TODO: we also need to inject the async delay time into the constructor
     def __init__(self):
-        raise NotImplementedError()
         self.__thread = threading.Thread(target=self.__process)
         self.__thread.daemon = True
         self.__thread.start()
