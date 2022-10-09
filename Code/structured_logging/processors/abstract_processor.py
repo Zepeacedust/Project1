@@ -5,7 +5,7 @@ class AbstractProcessor(IProcessor):
         self._next_processor = processor
         return processor
     @abstractmethod
-    def handle(self, request):
+    def handle(self, data: dict):
         if self._next_processor:
-            return self._next_processor.handle(request)
+            return self._next_processor.handle(data)
         return None
