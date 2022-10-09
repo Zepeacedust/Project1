@@ -37,7 +37,7 @@ class LoggerConfigBuilder:
         return self.add_processor(EnvironmentProcessor(environment))
     
     def add_timestamp(self):
-        return self.add_processor(TimestampProcessor)
+        return self.add_processor(TimestampProcessor())
 
     def add_processor(self, processor: IProcessor) -> 'LoggerConfigBuilder':
         new_processeor = processor
