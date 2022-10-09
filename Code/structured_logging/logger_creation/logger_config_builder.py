@@ -4,6 +4,7 @@ from Code.structured_logging.processors.I_processor import IProcessor
 from Code.structured_logging.sinks.I_sink import ISink
 
 from Code.structured_logging.processors.null_processor import NullProcessor
+from Code.structured_logging.processors.timestamp_processor import TimestampProcessor
 from Code.structured_logging.processors.environment_processor import EnvironmentProcessor
 
 from Code.structured_logging.sinks.console_sink import ConsoleSink
@@ -34,6 +35,9 @@ class LoggerConfigBuilder:
     
     def add_environment(self, environment: Environment) -> 'LoggerConfigBuilder':
         return self.add_processor(EnvironmentProcessor(environment))
+    
+    def add_timestamp(self):
+        return self.add_processor(TimestampProcessor)
 
     def add_processor(self, processor: IProcessor) -> 'LoggerConfigBuilder':
         new_processeor = processor
