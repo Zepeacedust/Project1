@@ -15,7 +15,7 @@ class LoggerConfigBuilder:
     def __init__(self):
         self.sink = ConsoleSink()
         self.processor = NullProcessor()
-        self.is_async = False
+        self.is_async = "false"
         self.async_wait_delay_in_seconds = 0
 
     def with_custom_sink(self, sink: ISink) -> 'LoggerConfigBuilder':
@@ -29,7 +29,7 @@ class LoggerConfigBuilder:
         return self.with_custom_sink(ConsoleSink())
         
     def as_async(self, wait_delay_in_seconds: int) -> 'LoggerConfigBuilder':
-        self.is_async = True
+        self.is_async = "true"
         self.async_wait_delay_in_seconds = wait_delay_in_seconds
         return self
     
@@ -48,7 +48,7 @@ class LoggerConfigBuilder:
     def _clear(self):
         self.sink = ConsoleSink()
         self.processor = NullProcessor()
-        self.is_async = False
+        self.is_async = "false"
         self.async_wait_delay_in_seconds = 0
         return self
 

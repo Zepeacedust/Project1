@@ -4,5 +4,5 @@ class EnvironmentProcessor(AbstractProcessor):
     def __init__(self, environment):
         self.environment = environment
     def handle(self, data: dict):
-        data["environment"] = self.environment
+        data["environment"] = str(self.environment)
         return super().handle(data)

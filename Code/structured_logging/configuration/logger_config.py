@@ -6,5 +6,7 @@ from Code.structured_logging.sinks.I_sink import ISink
 class LoggerConfig(BaseSettings):
     sink: ISink
     processor: IProcessor
-    is_async: bool
+    is_async: str
     async_wait_delay_in_seconds: int
+    def get():
+        pass

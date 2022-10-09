@@ -6,6 +6,8 @@ from Code.structured_logging.logger.logger import Logger
 class Container(containers.DeclarativeContainer):
     config = providers.Configuration()
     queue = providers.Selector(config.is_async,
-                               true=providers.Factory(Queue, config.async_wait_delay_in_seconds))
-    logger = providers.Singleton(Logger,config, queue)
+                               true=providers.Factory(Queue, config.async_wait_delay_in_seconds),
+                               false=providers.Object(None)
+                               )
+    logger = providers.Singleton(Logger,config.config_object, queue)
 
